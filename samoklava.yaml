@@ -32,28 +32,31 @@ points:
       #   rotate: 5
       key.padding: ky
       columns:
-        pinky:
+        pinky:        
+          rotate: 5
           stagger: 0 ky
           spread: kx
           key:
             column_net: P20
         ring:
-          stagger: 0.7 ky
-          spread: kx
+          stagger: 14
+          spread: 20
+          rotate: 4
           key:
             column_net: P19
         middle:
-          stagger: 0.2 ky
-          spread: kx
+          rotate: 5
+          spread: 21
+          stagger: 5
           key:
             column_net: P18
         index:
-          stagger: -0.2 ky
+          stagger: -6
           spread: kx
           key:
             column_net: P15
         inner:
-          stagger: -0.1 ky
+          stagger: -2
           spread: kx
           key:
             column_net: P14
@@ -67,24 +70,20 @@ points:
     thumbfan:
       anchor:
         ref: matrix_inner_bottom
-        shift: [-1.5 kx, -1 ky]
+        shift: [-5, -19]
+        rotate: -10
       columns:
         near:
-          spread: kx
-          rotate: -15
-          origin: [-0.5 kx, -0.5 ky]
-          key:
-            column_net: P18
         home:
-          spread: kx
-          rotate: -15
-          origin: [-0.5 kx, -0.5 ky]
+          spread: 21.25
+          rotate: -12
+          origin: [-11.75, -9]
           key:
             column_net: P15
         far:
-          spread: kx
-          rotate: -15
-          origin: [-0.5 kx, -0.5 ky]
+          spread: 20
+          rotate: -10
+          origin: [-9.5, -9]
           key:
             column_net: P14
       rows:
@@ -122,6 +121,13 @@ outlines:
             shift: [-0.5 (kx + px), 0]
           - ref: matrix_pinky_top
             shift: [-0.5 (kx + px), 0]
+    ring_glue:
+      - type: polygon
+        points:
+          - ref: matrix_pinky_top
+          - ref: matrix_pinky_bottom
+          - ref: matrix_ring_bottom
+          - ref: matrix_ring_top
     patch_inner:
       - type: polygon
         points:
@@ -441,4 +447,3 @@ pcbs:
           layer: B.SilkS
           text: "samoklava v0.1\\nby soundmonster"
           justify: right mirror
-
