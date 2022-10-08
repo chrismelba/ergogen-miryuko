@@ -121,13 +121,6 @@ outlines:
             shift: [-0.5 (kx + px), 0]
           - ref: matrix_pinky_top
             shift: [-0.5 (kx + px), 0]
-    ring_glue:
-      - type: polygon
-        points:
-          - ref: matrix_pinky_top
-          - ref: matrix_pinky_bottom
-          - ref: matrix_ring_bottom
-          - ref: matrix_ring_top
     patch_inner:
       - type: polygon
         points:
