@@ -41,11 +41,10 @@ points:
   zones:
     matrix:
       # anchor:
-      #   rotate: 5
       key.padding: ky
       columns:
         pinky:        
-          rotate: 5
+          rotate: -9
           stagger: 0 ky
           spread: kx
           key:
@@ -91,13 +90,13 @@ points:
         home:
           spread: 21.25
           rotate: -12
-          origin: [-11.75, -9]
+          origin: [-15, -0]
           key:
             column_net: P15
         far:
           spread: 20
           rotate: -10
-          origin: [-9.5, -9]
+          origin: [-20, -0]
           key:
             column_net: P14
       rows:
@@ -129,12 +128,12 @@ outlines:
     patch_outer:
       - type: polygon
         points:
-          - ref: matrix_ring_top
-          - ref: matrix_ring_bottom
-          - ref: matrix_pinky_bottom
-            shift: [-0.5 (kx + px), 0]
-          - ref: matrix_pinky_top
-            shift: [-0.5 (kx + px), 0]
+          - ref: matrix_inner_top
+            shift: [0.5 (kx+ px), 0.5 (kx)]
+          - ref: matrix_inner_bottom
+            shift: [0.5 (kx + px), -0.5 (kx)]
+          - ref: matrix_inner_bottom
+          - ref: matrix_inner_top
     patch_inner:
       - type: polygon
         points:
@@ -144,6 +143,13 @@ outlines:
             shift: [0.5 (kx + px), 0]
           - ref: matrix_index_bottom
           - ref: matrix_index_top
+    patch_middle:
+      - type: polygon
+        points:
+        - ref: matrix_index_top
+        - ref: matrix_index_bottom
+        - ref: matrix_pinky_bottom
+        - ref: matrix_pinky_home
     controller_area:
       main:
         type: rectangle
@@ -170,17 +176,13 @@ outlines:
       main:
         type: outline
         name: raw
-      patch_inner:
-        type: outline
-        name: patch_inner
-        operation: add
-      patch_outer:
-        type: outline
-        name: patch_outer
-        operation: add
       thumbfan_glue:
         type: outline
         name: thumbfan_glue
+        operation: add
+      patch_middle:
+        type: outline
+        name: patch_middle
         operation: add
     base_outline:
       main:
@@ -294,22 +296,13 @@ pcbs:
         layer: Edge.Cuts
     footprints:
       mcu_l:
-        type: promicro
+        type: promicro_pretty
         params:
           orientation: up
         anchor:
           ref:
             - matrix_inner_top
           shift: [20, -11]
-          rotate: 270
-      mcu_r:
-        type: promicro
-        params:
-          orientation: down
-        anchor:
-          ref:
-            - matrix_inner_top
-          shift: [22.5, -12.25]
           rotate: 270
       pad_plus:
         type: pad
@@ -442,7 +435,7 @@ pcbs:
             - matrix_pinky_bottom
           shift: [0.75 kx, 0]
         params:
-          text: "Chris keyboard journey thanks to soundmonster"
+          text: "Chris' keyboard journey\\nthanks to soundmonster"
           justify: left
       info_r:
         type: text
@@ -452,5 +445,5 @@ pcbs:
           shift: [0.75 kx, 0]
         params:
           layer: B.SilkS
-          text: "Chris keyboard journey thanks to soundmonster"
+          text: "Chris' keyboard journey\\nthanks to soundmonster"
           justify: right mirror
