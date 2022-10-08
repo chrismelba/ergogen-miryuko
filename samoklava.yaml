@@ -15,14 +15,26 @@ points:
         nets:
           # from: P1
           # to: P2
-          from: =colrow
+          from: GND
+          to: =column_net
+      choc:
+        type: choc
+        anchor:
+          rotate: 180
+        params:
+          reverse: true
+          keycaps: true
+        nets:
+          # from: P1
+          # to: P2
+          from: GND
           to: =column_net
       diode:
         type: diode
         nets:
           # from: P3
           # to: P4
-          from: =colrow
+          from: GND
           to: =row_net
         anchor:
           shift: [0, -5]
