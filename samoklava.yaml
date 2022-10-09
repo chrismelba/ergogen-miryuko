@@ -3,6 +3,7 @@ units:
   ky: cy
   px: 2
   py: 2
+  mcu_width: 23
 points:
   key:
     footprints:
@@ -155,10 +156,10 @@ outlines:
         type: rectangle
         anchor:
           ref:
-            - thumbfan_near_thumb
-          rotate: 9
-          shift: [0 kx, -0.5 ky]
-        size: [32, 70]
+            - matrix_inner_top
+          shift: [(kx+px)/2+mcu_width, (kx+px)/2-2]
+          rotate: 180
+        size: [mcu_width+3, 70]
         corner: px
     switches:
       main:
@@ -296,7 +297,7 @@ pcbs:
         layer: Edge.Cuts
     footprints:
       mcu_l:
-        type: promicro_pretty
+        type: promicro
         params:
           orientation: up
         anchor:
