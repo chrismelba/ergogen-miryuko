@@ -44,9 +44,9 @@ points:
       key.padding: ky
       columns:
         pinky:        
-          rotate: -9
           stagger: 0 ky
           spread: kx
+          rotate: -9
           key:
             column_net: P20
         ring:
