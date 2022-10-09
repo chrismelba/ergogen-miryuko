@@ -297,8 +297,8 @@ pcbs:
         type: pad
         anchor:
           ref:
-            - mcu
-          shift: [0, -25]
+            - matrix_inner_top
+          shift: [20, -36]
           rotate: 0
         params:
           front: true
