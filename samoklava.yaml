@@ -297,8 +297,8 @@ pcbs:
         type: pad
         anchor:
           ref:
-            - matrix_inner_top
-          shift: [23, -6]
+            - mcu_1
+          shift: [0, -25]
           rotate: 0
         params:
           front: true
@@ -312,8 +312,8 @@ pcbs:
         type: pad
         anchor:
           ref:
-            - matrix_inner_top
-          shift: [23, -3]
+            - mcu_1
+          shift: [2, -25]
           rotate: 0
         params:
           front: true
