@@ -3,7 +3,7 @@ units:
   ky: cy
   px: 2
   py: 2
-  mcu_width: 23
+  mcu_width: 21
 points:
   key:
     footprints:
@@ -11,18 +11,6 @@ points:
         type: choc
         params:
           hotswap: true
-          reverse: true
-          keycaps: true
-        nets:
-          # from: P1
-          # to: P2
-          from: =colrow
-          to: =column_net
-      choc:
-        type: choc
-        anchor:
-          rotate: 180
-        params:
           reverse: true
           keycaps: true
         nets:
@@ -297,7 +285,7 @@ pcbs:
         layer: Edge.Cuts
     footprints:
       mcu_l:
-        type: promicro
+        type: promicro_pretty
         params:
           orientation: up
         anchor:
