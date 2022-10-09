@@ -296,7 +296,7 @@ pcbs:
         layer: Edge.Cuts
     footprints:
       mcu_l:
-        type: promicro
+        type: promicro_pretty
         params:
           orientation: up
         anchor:
