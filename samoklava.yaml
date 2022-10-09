@@ -284,7 +284,7 @@ pcbs:
         outline: pcb
         layer: Edge.Cuts
     footprints:
-      mcu_l:
+      mcu:
         type: promicro_pretty
         params:
           orientation: up
@@ -297,7 +297,7 @@ pcbs:
         type: pad
         anchor:
           ref:
-            - mcu_1
+            - mcu
           shift: [0, -25]
           rotate: 0
         params:
@@ -312,7 +312,7 @@ pcbs:
         type: pad
         anchor:
           ref:
-            - mcu_1
+            - mcu
           shift: [2, -25]
           rotate: 0
         params:
