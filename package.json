@@ -3,6 +3,6 @@
         "gen": "ergogen samoklava.yaml"
     },
     "dependencies": {
-        "ergogen": "github:chrismelba/ergogen#samkolava"
+        "ergogen": "github:chrismelba/ergogen"
    }
 }
