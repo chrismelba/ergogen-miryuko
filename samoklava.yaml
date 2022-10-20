@@ -35,18 +35,18 @@ points:
         pinky:
           stagger: 0 ky
           spread: kx
-          rotate: -9
+          rotate: 0
           key:
             column_net: P20
         ring:
           stagger: 14
-          spread: 20
-          rotate: 4
+          spread: kx
+          rotate: 0
           key:
             column_net: P19
         middle:
-          rotate: 5
-          spread: 21
+          rotate: 0
+          spread: kx
           stagger: 5
           key:
             column_net: P18
@@ -297,8 +297,8 @@ pcbs:
         type: pad
         anchor:
           ref:
-            - matrix_inner_top
-          shift: [20, -32]
+            - mcu
+          shift: [0, -25]
           rotate: 0
         params:
           front: true
@@ -312,8 +312,8 @@ pcbs:
         type: pad
         anchor:
           ref:
-            - matrix_inner_top
-          shift: [22, -32]
+            - mcu
+          shift: [2, -25]
           rotate: 0
         params:
           front: true
