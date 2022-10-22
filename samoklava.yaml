@@ -8,7 +8,7 @@ points:
   key:
     footprints:
       choc_hotswap:
-        type: mx_low
+        type: gateron_low
         params:
           reverse: true
           keycaps: true
