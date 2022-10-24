@@ -83,7 +83,7 @@ points:
             column_net: P15
         far:
           spread: 20
-          rotate: -14
+          rotate: -13
           origin: [-20, 0]
           key:
             column_net: P14
