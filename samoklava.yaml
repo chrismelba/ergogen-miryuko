@@ -1,6 +1,6 @@
 units:
-  kx: cx
-  ky: cy
+  kx: mx
+  ky: my
   px: 2
   py: 2
   mcu_width: 21
@@ -8,7 +8,7 @@ points:
   key:
     footprints:
       choc_hotswap:
-        type: choc
+        type: gateron_low
         params:
           reverse: true
           keycaps: true
