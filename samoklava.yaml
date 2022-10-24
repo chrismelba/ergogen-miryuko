@@ -1,6 +1,6 @@
 units:
-  kx: mx
-  ky: my
+  kx: u
+  ky: u
   px: 2
   py: 2
   mcu_width: 21
