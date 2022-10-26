@@ -10,6 +10,7 @@ points:
       choc_hotswap:
         type: choc
         params:
+          hotswap: true
           reverse: true
           keycaps: true
         nets:
