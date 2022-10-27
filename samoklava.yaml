@@ -145,7 +145,7 @@ outlines:
         anchor:
           ref:
             - matrix_inner_top
-          shift: [(kx+px)/2+mcu_width, (kx+px)/2-2]
+          shift: [(kx+px)/2+mcu_width+2, (kx+px)/2-2]
           rotate: 180
         size: [mcu_width+4, 70]
         corner: px
